@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "4d7a7b62-f8dc-4667-b5fb-002a89e3d6d7",
+		"name": "html-export",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39798459"
+	},
+	"item": [
+		{
+			"name": "/canvas/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"width\": 500,\n    \"height\": 500\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/canvas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"canvas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/canvas/elements",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"canvasId\": \"673a008e6be5abc47b9e58a2\",\n    \"elements\": [{\n        \"x\": 200,\n        \"y\": 200,\n        \"type\": \"RECTANGLE\",\n        \"width\": 200,\n        \"height\": 200\n    },\n    {\n        \"x\": 400,\n        \"y\": 200,\n        \"type\": \"RECTANGLE\",\n        \"width\": 210,\n        \"height\": 200\n    }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/canvas/elements",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"canvas",
+						"elements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/canvas/export",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"canvasId\": \"673a008e6be5abc47b9e58a2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/canvas/export",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"canvas",
+						"export"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
