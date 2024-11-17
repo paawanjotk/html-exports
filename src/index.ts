@@ -17,7 +17,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 mongoose
-  .connect("mongodb://127.0.0.1:27017/rockass")
+  .connect(process.env.MONGODB_URL as string)
   .then(() => console.log("Connected!"));
 
 app.get("/", function (req: Request, res: Response) {
